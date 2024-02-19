@@ -1,0 +1,430 @@
+* {
+    font-family: "Segoe UI",sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+/* css variables */
+:root {
+    --white: #fff;
+    --dark-gray: #ababab;
+    --light-gray: #808080;
+    --dark-bg: #222222;
+    --light-bg: #333333;
+    --yellow: #bac964;
+    --box-shadow: 0 0.5rem rgba(0,0,0,0.1);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6 rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--light-bg);
+}
+
+
+body {
+    background-color: var(--dark-bg);
+    overflow-x: hidden;
+}
+
+section {
+    padding: 5rem 9%;
+}
+.heading {
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 200;
+    text-align: center;
+    padding-bottom: 4rem;
+
+}
+.heading span {
+    font-weight: 700;
+}
+
+/* home */
+
+.home {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/space.jpg');
+    filter: grayscale(100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.home .hero-text {
+    font-size: 7rem;
+    color: var(--white);
+    font-weight: 200;
+    line-height: 1.2;
+}
+
+.home .hero-text span {
+    font-weight: 800;
+}
+
+.home p {
+    color: var(--dark-gray);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+
+
+#navbarNav{
+    font-size: 20px;
+    font-weight: 10px;
+
+   
+}
+
+
+ nav #navbarNav ul li a{
+     padding-left: 20px;
+ }
+
+
+
+/* portfolio */
+.portfolio .box-container .box .image {
+    height: 30rem;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.portfolio .box-container .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.portfolio .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 4rem;
+}
+
+.portfolio .box-container .box {
+    background-color: var(--light-bg);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.portfolio .box-container .box:hover .image img {
+    transform: scale(1.2);
+}
+.portfolio .box-container .box:hover .image .content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--light-bg);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    
+}
+.portfolio .box-container .box:hover .image .content h2 {
+    font-size: 2rem;
+    color: var(--white);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.portfolio .box-container .box:hover .image .content{
+  transform: translateY(0);
+}
+
+
+/* portfolio */
+
+
+/* experience */
+.experience .col-container .col .box {
+    
+    padding: 2.5rem;
+    margin: 2rem 0;
+    background-color: var(--light-bg);
+    box-shadow: var(--box-shadow);
+}
+
+.experience .col-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 4rem;
+}
+
+.experience .col-container .col h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 200;
+    padding-bottom:2rem;
+
+}
+
+.experience .col-container .col .box span {
+    color: var(--white);
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+}
+
+.experience .col-container .col .box span i {
+    padding: 0.5rem;
+    font-size: 1.7rem;
+}
+
+.experience .col-container .col .box h3 {
+    color: var(--yellow);
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-weight: 400;
+
+
+}
+
+.experience .col-container .col .box p {
+    font-size: 1.7rem;
+    color: var(--dark-gray);
+    margin-top: 1rem;
+    line-height: 1.5;
+    text-transform: none;
+}
+
+
+
+/* experience */
+
+
+
+
+
+/* about */
+
+.about .box-container .box .image{
+    height: 100%;
+    overflow: hidden;
+}
+
+.about .box-container .box .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ .about .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+ }
+
+ .about .box-container .box h3{
+    color: whitesmoke;
+    padding-left: 10%;
+    font-size: 250%;
+    font-weight: 100%;
+    text-align: center;
+    padding-bottom: 1.2rem;
+ }
+ .about .box-container .box p{
+    color: darkgrey;
+    padding-left:10%; 
+    margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.5;
+    text-transform: none;
+    font-size: 1.31rem;
+ }
+
+/* about */
+
+
+
+
+
+
+/* Resume starts*/
+
+#resume .container-resume .box .image{
+    height: 100%;
+    overflow: hidden;
+}
+
+#resume .container-resume .box .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#resume .container-resume{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+}
+
+
+
+.section-title h2 {
+    font-weight: 700;
+    color: white;
+    font-size: 45px;
+    /* margin: 0 0 15px; */
+    border-left: 5px solid #fc5356;
+    padding-left: 15px;
+    align-items: center;
+}
+
+.section-title p {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Resume Box
+---------------------*/
+
+
+
+
+
+.resume-box {
+
+  background-color: var(--light-bg);
+  box-shadow: var(--box-shadow);
+  box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.08);
+  border-radius: 10px;
+  width: 100%;
+  
+}
+.resume-box ul {
+  margin: 0;
+  padding: 30px 20px;
+  list-style: none;
+}
+.resume-box li {
+  position: relative;
+  padding: 0 20px 0 60px;
+  margin: 0 0 30px;
+}
+.resume-box li:last-child {
+  margin-bottom: 0;
+}
+.resume-box li:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  border-left: 1px dashed #fc5356;
+  bottom: 0;
+}
+.resume-box .icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #fc5356;
+  line-height: 40px;
+  background: #ffffff;
+  text-align: center;
+  z-index: 1;
+  border: 1px dashed;
+  border-radius: 50%;
+}
+.resume-box .time {
+  background: #fc5356;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 2px 10px;
+  display: inline-block;
+  margin-bottom: 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.resume-box h5 {
+  font-weight: 700;
+  color: #bac964;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.resume-box p {
+  margin: 0;
+  color: lightgray;
+}
+
+.resume-box li:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    border-left: 1px dashed white;
+    bottom: 0;
+}
+/* resume ends*/
+
+
+footer{
+    background-color: var(--light-bg);
+}
+
+
+
+
+
+
+/* popup */
+
+.popup {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.popup-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 30%;
+    font-weight: bolder;
+}
+.popup-content button {
+    display: block;
+    margin: 0 auto;
+}
+.show {
+    display: block;
+}
